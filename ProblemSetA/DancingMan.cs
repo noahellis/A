@@ -46,6 +46,43 @@ namespace ProblemSetA
            *                      * ");
         }
 
+        public void MoveLegsApart()
+        {
+            Console.WriteLine(@"
+
+                     *  * 
+                   *      * 
+                     *  *
+                       *
+                   *  *  * 
+                 *    *     *
+               *      *       *
+                       * 
+                   *      * 
+                 *          * 
+               *              * 
+             *                  * 
+           *                      * ");
+        }
+
+        public void BringLegsTogether()
+        {
+            Console.WriteLine(@"
+
+                     *  * 
+                   *      * 
+                     *  *
+                       *
+                   *  *  * 
+                 *    *     *
+               *      *       *
+                       * 
+                   *      * 
+                 *          * 
+               *              * 
+                 *         * 
+               *             * ");
+        }
         public void MoveArm()
         {
             
@@ -67,9 +104,27 @@ namespace ProblemSetA
                     Console.ReadKey();
                 }
             }
-            
-            
-            
+        }
+        public void MoveLegs()
+        {
+            for (int i = 10; i < 20; i++)
+            {
+                 if ((i > 10) && (i %2 ==0))
+                 {
+                    Console.Clear();
+                    BringLegsTogether();
+                    Console.ReadKey();
+                 }
+
+                 else
+                {
+                    Console.Clear();
+                    MoveLegsApart();
+                    Console.ReadKey();
+                }
+            }
+                
+                
         }
     }
 }

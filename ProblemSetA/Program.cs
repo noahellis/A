@@ -23,16 +23,17 @@ namespace ProblemSetA
             //combo.GiveBMODirections();
 
             //Dancing Man
-            //DancingMan dance = new DancingMan();
-            //dance.MoveArm();
+            DancingMan dance = new DancingMan();
+            dance.MoveArm();
+            dance.MoveLegs();
 
             //Adventure Time
             //AdventureTime combo = new AdventureTime();
             //combo.DoComboMove();
 
             //Rotated NUmbers
-            RotatedNumbers rotate = new RotatedNumbers();
-            rotate.AddToList();
+           // RotatedNumbers rotate = new RotatedNumbers();
+            //rotate.RotateRight();
         }
     }
 }

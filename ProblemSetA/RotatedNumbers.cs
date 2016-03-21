@@ -8,45 +8,34 @@ namespace ProblemSetA
 {
     class RotatedNumbers
     {
-        List<int> moveSpot = new List<int>();
-        public void RotateOneSpot()
-       {
-            
-            for (int i = 0; i < moveSpot.Count; i++)
-                moveSpot.Insert(0, moveSpot.Count);
-            moveSpot.Remove(0);
-       }
-
-        public void RotateSecondSpot()
+        
+        public List<int> RotateRight()
         {
-            
-            for (int i = 0; i < moveSpot.Count; i++)
-                moveSpot.Insert(0, moveSpot.Count);
-            moveSpot.Remove(0);
-        }
+            List<int> moveSpot = new List<int>();
 
-        public void AddFive()
-        {
-            for (int i = 0; i < moveSpot.Count; i++)
-            {
-                i=i + 5;
-            }
-                
-        }
-
-        public void AddToList()
-        {
             moveSpot.Add(1);
             moveSpot.Add(2);
             moveSpot.Add(3);
             moveSpot.Add(4);
             moveSpot.Add(5);
             moveSpot.Add(6);
-            RotateOneSpot();
-            RotateSecondSpot();
-            AddFive();
-            Console.WriteLine();
 
-        }
+             int listLength = moveSpot.Count;
+            for (int i = 0; i < listLength; i++)
+            {
+                moveSpot.Insert(0, moveSpot[i - 1]);
+                moveSpot.Remove(listLength);
+                moveSpot.Insert(0, moveSpot[i - 1]);
+                moveSpot.Remove(listLength);
+            }
+            for (int i = 0; i < moveSpot.Count; i++)
+            {
+                i = i + 5;
+                Console.WriteLine(moveSpot);
+            }
+            Console.WriteLine(moveSpot);
+            return moveSpot;
+            
+        }            
     }
 }
